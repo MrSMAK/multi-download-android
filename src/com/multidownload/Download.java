@@ -58,7 +58,8 @@ public class Download {
 	public Vector<DownloadPart>part;
 	OnCompleteListener onCompleteListenner;
 	
-	public Download(Context c,String savePath){
+	public Download(Context c, String url, String savePath){
+		this.url = url;
 		downloaded = perc = 0;idDownload = 0;
 		part = new Vector<DownloadPart>();
 		SharedPreferences sp = c.getSharedPreferences("iddownload", Context.MODE_PRIVATE);
